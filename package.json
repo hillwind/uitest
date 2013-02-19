@@ -11,6 +11,7 @@
         "email":"bofei.zq@taobao.com"
     },
     "dependencies":{
+        "socket.io-client": "0.9.11",
         "socket.io":">= 0.9.0",
         "http-proxy":">=0.8.2",
         "log4js":"~0.5.6",
