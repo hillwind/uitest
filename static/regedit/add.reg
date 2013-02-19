@@ -1,0 +1,5 @@
+REGEDIT4
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings]
+"MigrateProxy"=dword:00000001
+"AutoConfigURL"="http://localhost:8080/static/regedit/proxy.pac"
+"CertificateRevocation"=dword:00000001

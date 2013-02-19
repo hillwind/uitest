@@ -1,0 +1,7 @@
+REGEDIT4
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings]
+"MigrateProxy"=dword:00000001
+"ProxyEnable"=dword:00000001
+"ProxyHttp1.1"=dword:00000000
+"ProxyServer"="http://localhost:8081"
+"ProxyOverride"="<local>"

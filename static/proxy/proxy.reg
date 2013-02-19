@@ -1,4 +1,0 @@
-REGEDIT4
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings]
-"AutoConfigURL"="http://localhost:8080/static/proxy/proxy.pac"
-"CertificateRevocation"="dword:00000001"

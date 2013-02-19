@@ -1,4 +1,3 @@
 REGEDIT4
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings]
 "AutoConfigURL"=""
-"CertificateRevocation"="dword:00000000"

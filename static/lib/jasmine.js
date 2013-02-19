@@ -549,7 +549,8 @@
         return jasmine.getEnv().currentSpec.waitsMatchers(matchersFunc, timeout);
     };
     if (isCommonJS) exports.waitsMatchers = waitsMatchers;
-    //window.waitsMathers = waitsMatchers;
+    //window.waitsMatchers = waitsMatchers;
+    UT.waitsMatchers = waitsMatchers;
     UT.waitsMathers = waitsMatchers;
     /**
      * Defines part of a jasmine spec.  Used in cominbination with waits or waitsFor in asynchrnous specs.
@@ -2733,9 +2734,9 @@
 
     UT.execute = function (callback) {
         var jasmineEnv = jasmine.getEnv();
-        var jsonReporter = new jasmine.JsonReporter(function (json) {
-
-            callback && callback(json);
+        var jsonReporter = new jasmine.JsonReporter(function (result) {
+            result.url = location.href;
+            callback && callback(result);
         });
         jasmineEnv.addReporter(jsonReporter);
         jasmineEnv.execute();

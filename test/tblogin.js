@@ -18,22 +18,28 @@ var win = UT.open("http://login.taobao.com/member/login.jhtml?from=buy&full_redi
             });
 
             runs(function () {
-                console.log(info)
-                var doc = document;
-                var safeInput = document.getElementById("J_SafeLoginCheck");
-                var quick = document.getElementById("J_Quick2Static");
-                if (safeInput && safeInput.checked) {
-                    safeInput.click();
-                    safeInput.checked = false;
-                }
-                if (quick)quick.click();
-                var forms = doc ? doc.getElementsByTagName('form') : null;
-                forms[0]['TPL_username'].value = info.username;
-                forms[0]['TPL_password'].value = info.password;
-                var button = document.getElementById("J_SubmitStatic");
 
+
+
+
+                if(jQuery("#J_QuickLogin").css("display")!="none"){
+                    var quick = jQuery("#J_Quick2Static");
+                    if (quick[0])quick[0].click();
+                }
+                var safeInput = jQuery("#J_SafeLoginCheck");
+                if (safeInput[0] && safeInput[0].checked) {
+                    safeInput[0].click();
+                    safeInput[0].checked = false;
+                }
+
+
+                var form =jQuery('form')[0];
+
+                form['TPL_username'].value = info.username;
+                form['TPL_password'].value = info.password;
+                var button = jQuery("#J_SubmitStatic")[0];
                 button.click();
-                //forms[0].submit();
+              //  forms[0].submit();
 
             })
 
